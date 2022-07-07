@@ -1,0 +1,114 @@
+
+#content{
+    margin: 3em auto;
+    padding: 2em;
+    width: 1024px;
+    border: 1px solid orange;
+    outline: 1px solid blue;
+    outline-offset: 5px;
+}
+#list, #allInList{
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1em;
+}
+#list{
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 0 0.5em;
+}
+#list li::before {
+    content: '\25ba';
+    padding-right: 0.5em;
+    color: orange;
+}
+#allInList li:not(.caption){
+    margin-bottom: 1em;
+    border-left: 3px solid blue;
+    padding-left: 1em;
+}
+li.caption::before, #list li.caption::before, #allInList li.caption::before {
+    content: '';
+    display: none;
+}
+.caption h4{
+    margin: 0;
+}
+#infoBox{
+    background: blue;
+    color: white;
+    padding: 1em;
+}
+.advert{
+    background: orange;
+    text-align: center;
+    color: white;
+    padding: 0.5em 0.5em 1.5em 0.5em ;
+    margin: 2em 0;
+}
+#infoBox{
+    display: inline-block;
+    background: white;
+    color: black;
+    border-radius: 1em;
+    padding: 2em;
+}
+#filter{
+    text-align: right;
+}
+
+   /* button */
+.button {
+   align-items: center;
+   appearance: none;
+   background-color: blue;
+   background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+   background-size: calc(100% + 20px) calc(100% + 20px);
+   border-radius: 100px;
+   border-width: 0;
+   box-shadow: none;
+   box-sizing: border-box;
+   color: #FFFFFF;
+   cursor: pointer;
+   display: inline-flex;
+   font-family: CircularStd,sans-serif;
+   font-size: 1rem;
+   height: auto;
+   justify-content: center;
+   line-height: 1.5;
+   padding: 6px 20px;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   transition: background-color .2s,background-position .2s;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: top;
+   white-space: nowrap;
+}
+.button[disabled]{
+    background: grey;
+    cursor: progress;
+}
+
+.button:active,
+.button:focus {
+    outline: none;
+}
+
+.button:hover {
+    background-position: -20px -20px;
+}
+
+.button:focus:not(:active) {
+    box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+.info{
+    font-style: italic;
+    text-align: right;
+}
