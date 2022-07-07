@@ -1,12 +1,4 @@
 
-/*function sortByPrice(array, placeOfArray){
-    Sorting(inventory);
-
-    document.getElementById(placeOfArray).innerHTML = "Sorting by price" + array;
-    return array;
-
-}*/
-
 function sortByPrice() {
     Sorting(inventory);
 

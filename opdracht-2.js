@@ -1,18 +1,16 @@
 //---------- Hoeveel tv's zijn er al verkocht? ----------//
 
-//console.log("Er zijn posities van " + TVSoldOut.length + " typen er al verkocht");
-
 const TVSoldAtLeastOne = inventory.filter( (TVSoldAtLeastOneItem) => {
     return TVSoldAtLeastOneItem.sold >= 1;
 })
-//console.log(TVSoldAtLeastOne);
+
 
 let totalTVSold = 0;
 for (let i = 0; i < TVSoldAtLeastOne.length; i++) {
     //console.log(TVSoldAtLeastOne[i].type + " sold: " + TVSoldAtLeastOne[i].sold);
     totalTVSold += TVSoldAtLeastOne[i].sold;
 }
-//console.log(totalTVSold);
+
 
 const soldOutNumber = document.createElement('p');
 soldOutNumber.setAttribute('style', 'color: green');
@@ -25,7 +23,7 @@ let totalTVBought = 0;
 for (let i = 0; i < inventory.length; i++) {
     totalTVBought += inventory[i].originalStock;
 }
-//console.log (totalTVBought);
+
 
 const boughtNumber = document.createElement('p');
 boughtNumber.setAttribute('style', 'color: blue');

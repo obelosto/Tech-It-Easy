@@ -2,7 +2,6 @@
 const tvTypes = inventory.map( (tvName) => {
     return 'Type: ' + tvName.type;
 });
-//console.log(tvTypes);
 
 
 //----------tv's die die volledig uitverkocht zijn ----------//
@@ -10,15 +9,10 @@ const tvTypes = inventory.map( (tvName) => {
 const TVSoldOut = inventory.filter( (TVSoldOutItem) => {
     return TVSoldOutItem.originalStock === TVSoldOutItem.sold;
 })
-//console.log(TVSoldOut);
 
 
 //----------tv's die over AmbiLight beschikken ----------//
 
-/*const TVWithAmbiLight = inventory.filter( (AmbiLightTvItem) => {
-    return AmbiLightTvItem.options.ambiLight = true;
-})*/
-//console.log(TVWithAmbiLight);
 
 function TVWithAmbiLight(array){
 
@@ -27,7 +21,6 @@ function TVWithAmbiLight(array){
     })
 
 }
-//TVWithAmbiLight(inventory);
 
 //---------- tv's van laagste naar hoogste prijs ----------//
 
@@ -44,8 +37,5 @@ function Sorting(array){
         return 0;
     })
 }
-//Sorting(inventory);
-
-//console.log(inventory);
 
 

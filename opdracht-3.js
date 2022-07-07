@@ -1,14 +1,5 @@
 //---------- alle tv merken in een lijst op de pagina ----------//
 
-/*for (let k = 0; k < inventory.length; k++) {
-
-    const tvMerk = document.createElement('li');
-    tvMerk.innerHTML = inventory[k].brand;
-    document.getElementById('list').appendChild(tvMerk);
-}*/
-
-
-
 
 const tvBrandNames = inventory.map( (tvName) => {
     return tvName.brand;
@@ -19,7 +10,6 @@ let tvBrandNamesUnique = tvBrandNames.reduce(function(a,b){
     return a;
 },[]);
 
-//console.log(uniq, tvBrandNames);
 
 for (let k = 0; k < tvBrandNamesUnique.length; k++) {
 
@@ -34,7 +24,6 @@ function TVMerkenInList(x){
         return tvName.brand;
     });
 
-//console.log(newX);
 
 }
 TVMerkenInList(inventory);
